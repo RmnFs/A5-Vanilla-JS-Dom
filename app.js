@@ -20,9 +20,9 @@ function copyNumber(numberId) {
     });
 }
 
-// Call number 
 
-// Call number 
+
+// Call number functon
 function callNumber(numberId, serviceName) {
     const number = document.getElementById(numberId).textContent;
 
@@ -41,7 +41,7 @@ function callNumber(numberId, serviceName) {
     const historyContainer = document.getElementById("historyContainer");
     const callHistoryText = document.getElementById("callHistoryText");
 
-    // Remove "empty history" text if it exists
+    // Remove empty history text if it exists
     if (callHistoryText) callHistoryText.remove();
 
     const entry = document.createElement("div");
@@ -131,7 +131,8 @@ document.getElementById("RailCall").addEventListener("click", function () {
     callNumber("RailNumber", "Bangladesh Railway Helpline");
 });
 
-// Attach hearts
+
+//handle heart clicks
 document.querySelectorAll(".heart").forEach(function (heart) {
     heart.addEventListener("click", increaseHeart);
 });

@@ -10,6 +10,18 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
         integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <style>
+    .heart:hover 
+    {
+      transform: scale(1.1);
+      color: #ff0000;
+    }
+  </style>
+
+
+
+        
 </head>
 
 <body>
@@ -40,7 +52,7 @@
 
 
                     <div class="coin flex bg-[#00a63e] rounded-2xl px-3 items-center">
-                        <p class="text-white font-medium text-base"><span id="CopyCount">1</span> Copy</p>
+                        <p class="text-white font-medium text-base"><span id="CopyCount">0</span> Copy</p>
                     </div>
 
                 </div>
@@ -51,7 +63,7 @@
 
             <div
                 class="flex flex-col justify-center items-center bg-[linear-gradient(90deg,rgba(1,49,35,1),rgba(0,103,71,1)_50%,rgba(1,50,35,1)_100%)]">
-                <img src="assets/logo.png" alt="" class="w-[50px] h-[50px] my-3">
+                <img src="assets/logo-dark.png" alt="" class="w-[50px] h-[50px] my-3">
                 <h2 class="text-white xl:text-4xl text-2xl font-semibold mb-3">Emergency Service Directory</h2>
                 <p class="text-white xl:text-[20px] text-[16px] mb-5">Government Emergency Services at Your Fingertip-
                     A Project by Government of the People's
@@ -71,7 +83,7 @@
             <!-- 3 × 3 card grid -->
             <section class="w-3/4 grid grid-cols-3 gap-4">
                 <!-- 1 National Emergency -->
-                <div class="p-4 h-60 bg-[#f5fff6] rounded-xl flex flex-col justify-between">
+                <div class="p-4 h-60 bg-[#f5fff6] rounded-2xl flex flex-col justify-between shadow-lg">
                     <div>
                         <div class="flex justify-between items-center mb-2">
                             <div class="bg-[#ffe3e2] rounded-xl w-12 h-12 flex items-center justify-center">
@@ -92,18 +104,20 @@
                     </div>
                     <div class="flex gap-2">
                         <button id="NationalCopy"
-                            class="w-1/2 h-9 border border-[#d4d6d5] text-[#5c5c5c] rounded-lg text-xs flex items-center justify-center gap-1">
+                            class="w-1/2 h-9 border border-[#d4d6d5] text-[#5c5c5c] rounded-lg text-xs flex items-center justify-center gap-1
+                            transition-transform duration-200 hover:scale-105">
                             <i class="fa-regular fa-copy"></i> Copy
                         </button>
                         <button id="NationalCall"
-                            class="w-1/2 h-9 bg-[#00a63e] text-white rounded-lg text-xs flex items-center justify-center gap-1">
+                            class="w-1/2 h-9 bg-[#00a63e] text-white rounded-lg text-xs flex items-center justify-center gap-1
+                            transition-transform duration-200 hover:scale-105">
                             <i class="fa-solid fa-phone"></i> Call
                         </button>
                     </div>
                 </div>
 
                 <!-- 2 Police -->
-                <div class="p-4 h-60 bg-[#f5fff6] rounded-xl flex flex-col justify-between">
+                <div class="p-4 h-60 bg-[#f5fff6] rounded-2xl flex flex-col justify-between shadow-lg">
                     <div>
                         <div class="flex justify-between items-center mb-2">
                             <div class="bg-blue-100 rounded-xl w-12 h-12 flex items-center justify-center">
@@ -122,18 +136,20 @@
                     </div>
                     <div class="flex gap-2">
                         <button id="PoliceCopy"
-                            class="w-1/2 h-9 border border-[#d4d6d5] text-[#5c5c5c] rounded-lg text-xs flex items-center justify-center gap-1">
+                            class="w-1/2 h-9 border border-[#d4d6d5] text-[#5c5c5c] rounded-lg text-xs flex items-center justify-center gap-1
+                            transition-transform duration-200 hover:scale-105">
                             <i class="fa-regular fa-copy"></i> Copy
                         </button>
                         <button id="PoliceCall"
-                            class="w-1/2 h-9 bg-[#00a63e] text-white rounded-lg text-xs flex items-center justify-center gap-1">
+                            class="w-1/2 h-9 bg-[#00a63e] text-white rounded-lg text-xs flex items-center justify-center gap-1
+                            transition-transform duration-200 hover:scale-105">
                             <i class="fa-solid fa-phone"></i> Call
                         </button>
                     </div>
                 </div>
 
                 <!-- 3 Fire Service -->
-                <div class="p-4 h-60 bg-[#f5fff6] rounded-xl flex flex-col justify-between">
+                <div class="p-4 h-60 bg-[#f5fff6] rounded-2xl flex flex-col justify-between shadow-lg">
                     <div>
                         <div class="flex justify-between items-center mb-2">
                             <div class="bg-[#ffe3e2] rounded-xl w-12 h-12 flex items-center justify-center">
@@ -152,18 +168,20 @@
                     </div>
                     <div class="flex gap-2">
                         <button id="FireCopy"
-                            class="w-1/2 h-9 border border-[#d4d6d5] text-[#5c5c5c] rounded-lg text-xs flex items-center justify-center gap-1">
+                            class="w-1/2 h-9 border border-[#d4d6d5] text-[#5c5c5c] rounded-lg text-xs flex items-center justify-center gap-1
+                            transition-transform duration-200 hover:scale-105">
                             <i class="fa-regular fa-copy"></i> Copy
                         </button>
                         <button id="FireCall"
-                            class="w-1/2 h-9 bg-[#00a63e] text-white rounded-lg text-xs flex items-center justify-center gap-1">
+                            class="w-1/2 h-9 bg-[#00a63e] text-white rounded-lg text-xs flex items-center justify-center gap-1
+                            transition-transform duration-200 hover:scale-105">
                             <i class="fa-solid fa-phone"></i> Call
                         </button>
                     </div>
                 </div>
 
                 <!-- 4 Ambulance -->
-                <div class="p-4 h-60 bg-[#f5fff6] rounded-xl flex flex-col justify-between">
+                <div class="p-4 h-60 bg-[#f5fff6] rounded-2xl flex flex-col justify-between shadow-lg">
                     <div>
                         <div class="flex justify-between items-center mb-2">
                             <div class="bg-[#ffe3e2] rounded-xl w-12 h-12 flex items-center justify-center">
@@ -182,18 +200,20 @@
                     </div>
                     <div class="flex gap-2">
                         <button id="AmbulanceCopy"
-                            class="w-1/2 h-9 border border-[#d4d6d5] text-[#5c5c5c] rounded-lg text-xs flex items-center justify-center gap-1">
+                            class="w-1/2 h-9 border border-[#d4d6d5] text-[#5c5c5c] rounded-lg text-xs flex items-center justify-center gap-1
+                            transition-transform duration-200 hover:scale-105">
                             <i class="fa-regular fa-copy"></i> Copy
                         </button>
                         <button id="AmbulanceCall"
-                            class="w-1/2 h-9 bg-[#00a63e] text-white rounded-lg text-xs flex items-center justify-center gap-1">
+                            class="w-1/2 h-9 bg-[#00a63e] text-white rounded-lg text-xs flex items-center justify-center gap-1
+                            transition-transform duration-200 hover:scale-105">
                             <i class="fa-solid fa-phone"></i> Call
                         </button>
                     </div>
                 </div>
 
                 <!-- 5 Women & Child -->
-                <div class="p-4 h-60 bg-[#f5fff6] rounded-xl flex flex-col justify-between">
+                <div class="p-4 h-60 bg-[#f5fff6] rounded-2xl flex flex-col justify-between shadow-lg">
                     <div>
                         <div class="flex justify-between items-center mb-2">
                             <div class="bg-[#ffe3e2] rounded-xl w-12 h-12 flex items-center justify-center">
@@ -212,18 +232,20 @@
                     </div>
                     <div class="flex gap-2">
                         <button id="WomenCopy"
-                            class="w-1/2 h-9 border border-[#d4d6d5] text-[#5c5c5c] rounded-lg text-xs flex items-center justify-center gap-1">
+                            class="w-1/2 h-9 border border-[#d4d6d5] text-[#5c5c5c] rounded-lg text-xs flex items-center justify-center gap-1
+                            transition-transform duration-200 hover:scale-105">
                             <i class="fa-regular fa-copy"></i> Copy
                         </button>
                         <button id="WomenCall"
-                            class="w-1/2 h-9 bg-[#00a63e] text-white rounded-lg text-xs flex items-center justify-center gap-1">
+                            class="w-1/2 h-9 bg-[#00a63e] text-white rounded-lg text-xs flex items-center justify-center gap-1
+                            transition-transform duration-200 hover:scale-105">
                             <i class="fa-solid fa-phone"></i> Call
                         </button>
                     </div>
                 </div>
 
                 <!-- 6 Anti-Corruption -->
-                <div class="p-4 h-60 bg-[#f5fff6] rounded-xl flex flex-col justify-between">
+                <div class="p-4 h-60 bg-[#f5fff6] rounded-2xl flex flex-col justify-between shadow-lg">
                     <div>
                         <div class="flex justify-between items-center mb-2">
                             <div class="bg-[#ffe3e2] rounded-xl w-12 h-12 flex items-center justify-center">
@@ -242,18 +264,20 @@
                     </div>
                     <div class="flex gap-2">
                         <button id="CorruptionCopy"
-                            class="w-1/2 h-9 border border-[#d4d6d5] text-[#5c5c5c] rounded-lg text-xs flex items-center justify-center gap-1">
+                            class="w-1/2 h-9 border border-[#d4d6d5] text-[#5c5c5c] rounded-lg text-xs flex items-center justify-center gap-1
+                            transition-transform duration-200 hover:scale-105">
                             <i class="fa-regular fa-copy"></i> Copy
                         </button>
                         <button id="CorruptionCall"
-                            class="w-1/2 h-9 bg-[#00a63e] text-white rounded-lg text-xs flex items-center justify-center gap-1">
+                            class="w-1/2 h-9 bg-[#00a63e] text-white rounded-lg text-xs flex items-center justify-center gap-1
+                            transition-transform duration-200 hover:scale-105">
                             <i class="fa-solid fa-phone"></i> Call
                         </button>
                     </div>
                 </div>
 
                 <!-- 7 Electricity -->
-                <div class="p-4 h-60 bg-[#f5fff6] rounded-xl flex flex-col justify-between">
+                <div class="p-4 h-60 bg-[#f5fff6] rounded-2xl flex flex-col justify-between shadow-lg">
                     <div>
                         <div class="flex justify-between items-center mb-2">
                             <div class="bg-[#ffe3e2] rounded-xl w-12 h-12 flex items-center justify-center">
@@ -272,18 +296,20 @@
                     </div>
                     <div class="flex gap-2">
                         <button id="ElectricityCopy"
-                            class="w-1/2 h-9 border border-[#d4d6d5] text-[#5c5c5c] rounded-lg text-xs flex items-center justify-center gap-1">
+                            class="w-1/2 h-9 border border-[#d4d6d5] text-[#5c5c5c] rounded-lg text-xs flex items-center justify-center gap-1
+                            transition-transform duration-200 hover:scale-105">
                             <i class="fa-regular fa-copy"></i> Copy
                         </button>
                         <button id="ElectricityCAll"
-                            class="w-1/2 h-9 bg-[#00a63e] text-white rounded-lg text-xs flex items-center justify-center gap-1">
+                            class="w-1/2 h-9 bg-[#00a63e] text-white rounded-lg text-xs flex items-center justify-center gap-1
+                            transition-transform duration-200 hover:scale-105">
                             <i class="fa-solid fa-phone"></i> Call
                         </button>
                     </div>
                 </div>
 
                 <!-- 8 Brac -->
-                <div class="p-4 h-60 bg-[#f5fff6] rounded-xl flex flex-col justify-between">
+                <div class="p-4 h-60 bg-[#f5fff6] rounded-2xl flex flex-col justify-between shadow-lg">
                     <div>
                         <div class="flex justify-between items-center mb-2">
                             <div class="bg-[#ffe3e2] rounded-xl w-12 h-12 flex items-center justify-center">
@@ -302,18 +328,20 @@
                     </div>
                     <div class="flex gap-2">
                         <button id="BracCopy"
-                            class="w-1/2 h-9 border border-[#d4d6d5] text-[#5c5c5c] rounded-lg text-xs flex items-center justify-center gap-1">
+                            class="w-1/2 h-9 border border-[#d4d6d5] text-[#5c5c5c] rounded-lg text-xs flex items-center justify-center gap-1
+                            transition-transform duration-200 hover:scale-105">
                             <i class="fa-regular fa-copy"></i> Copy
                         </button>
                         <button id="BracCall"
-                            class="w-1/2 h-9 bg-[#00a63e] text-white rounded-lg text-xs flex items-center justify-center gap-1">
+                            class="w-1/2 h-9 bg-[#00a63e] text-white rounded-lg text-xs flex items-center justify-center gap-1
+                            transition-transform duration-200 hover:scale-105">
                             <i class="fa-solid fa-phone"></i> Call
                         </button>
                     </div>
                 </div>
 
                 <!-- 9 Bangladesh Railway -->
-                <div class="p-4 h-60 bg-[#f5fff6] rounded-xl flex flex-col justify-between">
+                <div class="p-4 h-60 bg-[#f5fff6] rounded-2xl flex flex-col justify-between shadow-lg">
                     <div>
                         <div class="flex justify-between items-center mb-2">
                             <div class="bg-[#ffe3e2] rounded-xl w-12 h-12 flex items-center justify-center">
@@ -334,11 +362,13 @@
                     </div>
                     <div class="flex gap-2">
                         <button id="RailCopy"
-                            class="w-1/2 h-9 border border-[#d4d6d5] text-[#5c5c5c] rounded-lg text-xs flex items-center justify-center gap-1">
+                            class="w-1/2 h-9 border border-[#d4d6d5] text-[#5c5c5c] rounded-lg text-xs flex items-center justify-center gap-1
+                            transition-transform duration-200 hover:scale-105">
                             <i class="fa-regular fa-copy"></i> Copy
                         </button>
                         <button id="RailCall"
-                            class="w-1/2 h-9 bg-[#00a63e] text-white rounded-lg text-xs flex items-center justify-center gap-1">
+                            class="w-1/2 h-9 bg-[#00a63e] text-white rounded-lg text-xs flex items-center justify-center gap-1
+                            transition-transform duration-200 hover:scale-105">
                             <i class="fa-solid fa-phone"></i> Call
                         </button>
                     </div>
